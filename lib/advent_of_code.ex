@@ -1,18 +1,6 @@
 defmodule AdventOfCode do
-  @moduledoc """
-  Documentation for `AdventOfCode`.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> AdventOfCode.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def get_input(year, day) do
+    root_path = File.cwd!
+    File.read!("#{root_path}/input/#{year}/day_#{day}")
   end
 end

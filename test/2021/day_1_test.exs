@@ -13,4 +13,8 @@ defmodule Day1Test do
     assert(part_1(context[:input]) == 7)
   end
 
+  test "part_2", context do
+    assert(part_2(context[:input]) == 5)
+  end
+
 end

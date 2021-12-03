@@ -14,7 +14,7 @@ defmodule Day3Test do
   end
 
   test "part_2", context do
-
+    assert(part_2(context[:input]) == 230)
   end
 
 end

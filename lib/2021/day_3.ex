@@ -6,7 +6,6 @@ defmodule AdventOfCode.Year2021.Day3 do
       |> Enum.map(&(String.graphemes(&1)))
       |> Enum.zip_with(&(get_most_common_bit(&1)))
       |> Enum.join()
-      |> IO.inspect()
       |> compute_power_consuption()
   end
 

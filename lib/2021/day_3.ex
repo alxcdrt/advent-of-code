@@ -12,7 +12,7 @@ defmodule AdventOfCode.Year2021.Day3 do
   @spec part_2(binary) :: integer
   def part_2(input) do
     t_input = parse_input(input) |> Enum.map(&(String.graphemes(&1)))
-    compute_oxygen_rating(t_input, 0) * compute_co2_rating(t_input, 0)
+    compute_oxygen_rating(t_input) * compute_co2_rating(t_input)
   end
 
   defp parse_input(input), do: input |> String.split("\n")
@@ -32,6 +32,6 @@ defmodule AdventOfCode.Year2021.Day3 do
     Enum.filter(input, &(Enum.at(&1, index)) == bit) |> compute_rating(index + 1, fun)
   end
 
-  defp compute_oxygen_rating(input, index), do: compute_rating(input, index, &>/2)
-  defp compute_co2_rating(input, index), do: compute_rating(input, index, &<=/2)
+  defp compute_oxygen_rating(input), do: compute_rating(input, 0, &>/2)
+  defp compute_co2_rating(input), do: compute_rating(input, 0, &<=/2)
 end

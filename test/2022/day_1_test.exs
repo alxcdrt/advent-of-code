@@ -14,7 +14,7 @@ defmodule Year2022.Day1Test do
     end
     
     test "part_2", context do
-        
+        assert(part_2(context[:input]) == 45000)
     end
 
 end

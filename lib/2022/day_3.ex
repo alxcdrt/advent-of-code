@@ -5,7 +5,6 @@ defmodule AdventOfCode.Year2022.Day3 do
         Enum.zip(?A..?Z, 27..52) |> Enum.reduce(%{}, fn {c, v}, acc -> Map.put(acc, c, v) end)
         )
 
-
     def part_1(input) do
         parse_input(input)
         |> Enum.map(&to_hash_set/1)
